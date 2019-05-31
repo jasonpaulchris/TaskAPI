@@ -52,6 +52,9 @@
       <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=2.0.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.2.0.1.0\lib\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -131,6 +134,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectConfigurator.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
@@ -255,6 +259,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TaskAPI.Common\TaskAPI.Common.csproj">
+      <Project>{3c19da84-a503-46b8-b9f8-ea7da535bf41}</Project>
+      <Name>TaskAPI.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TaskAPI.Web.Common\TaskAPI.Web.Common.csproj">
       <Project>{D92A11A9-3CB1-4AC5-85A5-2EB3BD3B1F37}</Project>
       <Name>TaskAPI.Web.Common</Name>
